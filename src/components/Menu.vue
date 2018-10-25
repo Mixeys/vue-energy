@@ -38,6 +38,10 @@ export default {
             title: "Каталог продукции",
             link: "/catalog"
           },
+          {
+            title: "Подбор программы",
+            link: "/form"
+          },
         ];
       } else {
         return [

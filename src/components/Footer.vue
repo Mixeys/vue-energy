@@ -58,7 +58,7 @@ footer.footer
     }
     &__social {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding: 20px 0;
         border-bottom: 1px solid #dadada;
     }

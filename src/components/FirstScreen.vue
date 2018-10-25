@@ -5,7 +5,7 @@ section.first-screen
         .first-screen__contain
             h1.first-screen__h1 Функциональное питание для котов
             h3.first-screen__h3 Занялся собой? Займись котом!
-            button.btn.btn--green Подобрать программу
+            router-link.btn.btn--green(:to="'/form'") Подобрать программу
 </template>
 
 <script lang="js">
@@ -34,6 +34,9 @@ section.first-screen
         top: 0;
         right: 0;
         z-index: -1;
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
     }
     .wrapper {
         flex-direction: column;
@@ -51,9 +54,23 @@ section.first-screen
     }
 }
 
+@media screen 
+  and (max-width: 768px)
+  and (orientation: landscape) {
+      .first-screen {
+          background: url(../assets/img/energy.png) no-repeat center 55%;
+          &__img {
+              width: 100%;
+              height: 50%;
+              object-fit: cover;
+          }
+      }
+}
+
 @media screen and (min-width: 768px) {
     .first-screen {
         background: url(../assets/img/energy-tablet.png) no-repeat center bottom;
+        background-size: contain;
         &__img {
             display: none;
         }
@@ -61,6 +78,9 @@ section.first-screen
             padding-left: 120px;
             text-align: left;
             align-items: flex-start;
+        }
+        &__contain {
+            width: min-content;
         }
         &__h1 {
             padding-right: 200px;
@@ -88,15 +108,17 @@ section.first-screen
         min-height: 570px;
         margin-bottom: 80px;
         padding-top: 100px;
-        padding-left: 190px;
         background: url(../assets/img/energy-desktop.png) no-repeat 75% center;
         &__contain {
-            max-width: 620px;;
+            max-width: 620px;
+            align-self: flex-start;
         }
         &__img {
             display: block;
             right: 0;
-            top: -130px;
+            top: 0;
+            height: 100%;
+            width: 50%;
         }
     }
     .first-screen {

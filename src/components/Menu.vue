@@ -38,10 +38,6 @@ export default {
             title: "Каталог продукции",
             link: "/catalog"
           },
-          {
-            title: "Подбор программы",
-            link: "/form"
-          }
         ];
       } else {
         return [
@@ -52,6 +48,10 @@ export default {
           {
             title: "Каталог продукции",
             link: "/catalog"
+          },
+          {
+            title: "Подбор программы",
+            link: "/form"
           },
           {
             title: "Вход",
@@ -88,6 +88,9 @@ export default {
   }
   &__item {
     border-top: 1px solid #e6e6e6;
+    &:last-child {
+        border-bottom: 1px solid #e6e6e6;
+    }
   }
   &__link {
     display: block;
@@ -99,6 +102,11 @@ export default {
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
+    span {
+        display: inline-block;
+        min-height: 22px;
+        box-sizing: border-box;
+    }
     &:hover {
       opacity: 0.6;
       span {
@@ -128,7 +136,7 @@ export default {
   .menu {
     display: flex;
     position: static;
-    max-width: 60%;
+    max-width: 70%;
     &__list {
       display: flex;
       width: 100%;
@@ -136,11 +144,15 @@ export default {
     }
     &__item {
       border-top: none;
+      &:last-child {
+        border-bottom: none;
+    }
       &:last-child a {
         padding-right: 0;
       }
     }
     &__link {
+      padding: 20px 15px;
       font-size: 18px;
     }
   }
@@ -149,7 +161,6 @@ export default {
 @media screen and (min-width: 1220px) {
   .menu {
     justify-content: flex-end;
-    max-width: 50%;
     background-color: transparent;
     &__link {
       &:hover {

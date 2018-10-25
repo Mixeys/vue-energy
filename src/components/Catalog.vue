@@ -28,7 +28,7 @@ section.catalog
                 i.fas.fa-plus
                 h2.catalog__h2 Показать еще 100500 товаров
                 p.catalog__text На самом деле вкусов гораздо больше!
-                button.btn.btn--grey Показать все
+                button.btn.btn--grey(@click="dubleArray") Показать все
 </template>
 
 <script lang="js">
@@ -36,7 +36,7 @@ section.catalog
     name: 'catalog',
     data() {
       return {
-          items: [
+          array: [
               {
                   srcset: require('../assets/img/catalog-1.png'),
                   src: require('../assets/img/catalog-1-mobile.png'),
@@ -95,6 +95,16 @@ section.catalog
               }
           ]
       }
+    },
+    computed: {
+        items() {
+            return this.array
+        }
+    },
+    methods: {
+        dubleArray() {
+            return this.array = this.array.concat(this.array)
+        }
     }
 }
 </script>
@@ -116,6 +126,7 @@ section.catalog
         width: 100%;
         display: flex;
         flex-direction: column;
+        padding-left: 0;
     }
     &__item {
         display: flex;

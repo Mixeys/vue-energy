@@ -1,13 +1,13 @@
 <template lang="pug">
-header
+header#head
   section.top-bar
     .wrapper
-        a.logo.top-bar__logo(href="/")
+        router-link.logo.top-bar__logo(:to="'/'")
             picture
                 source(media="(min-width: 768px)" srcset="../assets/img/logo-tablet.png")
                 source(media="(min-width: 1220px)" srcset="../assets/img/logo-desktop.png")
                 img.logo__img(src="../assets/img/logo-mobile.png" alt="logo")
-        a.logo.top-bar__logo-text(href="/")
+        router-link.logo.top-bar__logo-text(:to="'/'")
             img.logo__img(src="../assets/img/logo-mobile-header.png" alt="logo-header")
         Humburger
         Menu

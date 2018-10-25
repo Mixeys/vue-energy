@@ -73,6 +73,9 @@ section.extra
         line-height: 24px;
         border-bottom: 1px solid #dedede;
     }
+    &__list {
+        padding-left: 0;
+    }
     &__item {
         display: flex;
         flex-direction: column;

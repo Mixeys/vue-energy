@@ -72,7 +72,6 @@ section.form
 <style scoped lang="scss">
 .form {
   padding-top: 30px;
-  border-top: 1px solid #e6e6e6;
   .wrapper {
     flex-direction: column;
   }
@@ -248,6 +247,17 @@ section.form
   }
   &__text {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    .wrapper{
+      width: 768px;
+    }
+    &__input {
+      width: 400px;
+    }
   }
 }
 

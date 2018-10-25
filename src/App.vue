@@ -52,6 +52,7 @@ ul {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .btn--green {

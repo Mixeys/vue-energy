@@ -2,14 +2,14 @@
 footer.footer
     .wrapper
         .footer__title
-            router-link(:to="'/'")
+            router-link(:to="'/'" @click.native="scrollToTop")
                 img.footer__img(src="../assets/img/footer-logo.png", alt="logo")
         .footer__social.social
             a.social__link(:key="index" v-for="(link, index) in links" :href="link.link")
                 i.fab(:class="link.class")
         .footer__copyright
-            span.footer__text Beetroot Academy
-            a.footer__link(href="javascript:void(0)")
+            span.footer__text Academy
+            a.footer__link(href="https://beetroot.academy/")
 </template>
 
 <script lang="js">
@@ -32,6 +32,11 @@ footer.footer
           }
         ]
       }
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0)
+        }
     }
 }
 </script>
@@ -79,11 +84,12 @@ footer.footer
     }
     &__link {
         display: block;
-        width: 27px;
+        width: 95px;
         height: 45px;
-        background: url(../assets/img/academy.png) no-repeat center;
+        background: url(../assets/img/beetroot.png) no-repeat center;
+        background-size: contain;
         &:hover {
-            background: url(../assets/img/academy-green.png) no-repeat center;
+            transform: scale(1.1);
         }
     }
 }

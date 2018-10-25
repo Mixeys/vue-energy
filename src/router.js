@@ -8,6 +8,12 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior(to, from, savedPosition) {
+    return {
+        x: 0,
+        y: 0,
+    }
+  },
   routes: [
     {
       path: '/',
@@ -26,7 +32,7 @@ export default new Router({
       path: '/form',
       name: 'form',
       component: () => import('./views/Form.vue'),
-      beforeEnter: AuthGuard
+      // beforeEnter: AuthGuard
     },
     {
       path: '/login',

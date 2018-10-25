@@ -8,7 +8,7 @@ section.categories
             .categories__content
                 p.categories__text Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                 img(src="../assets/img/cat1-tablet.png" alt="cat").categories__img.categories__img--big
-            a.categories__link(href="javascript:void(0)") Каталог Slim
+            router-link.categories__link(:to="'/catalog'") Каталог Slim
                 img.categories__link-img(src="../assets/img/long-right-arrow.svg" alt="right arrow")
         .categories__block
             .categories__title
@@ -17,7 +17,7 @@ section.categories
             .categories__content
                 p.categories__text Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                 img(src="../assets/img/cat2-tablet.png" alt="cat").categories__img.categories__img--big
-            a.categories__link(href="javascript:void(0)") Каталог pro
+            router-link.categories__link(:to="'/catalog'") Каталог pro
                 img.categories__link-img(src="../assets/img/long-right-arrow.svg" alt="right arrow")
 </template>
 

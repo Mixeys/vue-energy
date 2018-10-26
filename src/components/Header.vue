@@ -46,12 +46,15 @@ import Menu from '@/components/Menu.vue'
 
 @media screen and (min-width: 768px) {
     .wrapper {
+        height: 80px;
+        box-sizing: border-box;
         padding: 0 30px;
     }
     header {
         background: none;
     }
     .top-bar {
+        box-sizing: border-box;
         &__logo-text {
             display: none;
             padding-top: 25px;

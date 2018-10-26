@@ -64,7 +64,7 @@ export default {
           {
             title: "Регистрация",
             link: "/register"
-          }
+          },
         ];
       }
     }
@@ -141,6 +141,8 @@ export default {
     display: flex;
     position: static;
     max-width: 70%;
+    height: 80px;
+    box-sizing: border-box;
     &__list {
       display: flex;
       width: 100%;
